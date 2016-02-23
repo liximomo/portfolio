@@ -1,0 +1,36 @@
+.speech {
+  padding: 20px;
+  position: relative;
+  width: 260px;
+  min-height: 200px;
+  background: #F3F3F3;
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+.speech:after {
+  content: ' ';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 300px;
+  top: 38px;
+  background: linear-gradient(-135deg, transparent 51%, #F3F3F3 0);
+}
+
+.speech.speech-reply:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -30px;
+  top: 38px;
+  border: 15px solid;
+  border-color: #F3F3F3 #F3F3F3 transparent transparent;  
+}
+
+html, body,
+#root, .main-container,
+.scene {
+  height: 100%;
+}
