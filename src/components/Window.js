@@ -1,19 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 import Speech from '../components/Speech';
+import Record from '../components/Record'; 
 
 class Window extends Component {
   render() {
     return (
-      <div style={style} >
-        <Speech speech={{content: 'hello!'}}/>
-        <Speech speech={{reply: true, content: 'hi!'}}/>
+      <div className="absolute-center mobile" >
+        <div className="screen">
+          <Record speech={{content: 'hello!'}}/>
+          <Record speech={{reply: true, content: 'hi!'}}/>
+        </div>
       </div>
     )
   }
-}
-
-const style = {
-  border: '1px solid black',
 }
 
 export default Window;

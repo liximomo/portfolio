@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel:c": "babel src/ -d build/",
-    "start": "node ./tools/server.dev.js"
+    "start": "node ./tools/server.dev.js",
+    "bundle": "node ./node_modules/webpack/bin/webpack.js"
   },
   "keywords": [],
   "author": "",

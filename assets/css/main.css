@@ -1,36 +1,117 @@
 .speech {
-  padding: 20px;
   position: relative;
-  width: 260px;
-  min-height: 200px;
+  margin: 0px 12px 0px;
+  padding: 20px;
   background: #F3F3F3;
   border: 1px solid gray;
-  border-radius: 30px;
+  border-radius: 12px;
+  text-align: right;
+  display: inline-block;
+  float: right;
 }
 
+.speech.speech-left {
+  text-align: left;
+  float: none;
+}
+
+/*外层提供border*/
+.speech:before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 11px;
+  /*background: linear-gradient(-135deg, transparent 51%, gray 0);*/
+  border: 10px solid;
+  border-color: transparent transparent gray gray;
+}
+
+/*内层与容器背景色一致*/
 .speech:after {
-  content: ' ';
+  content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  left: 300px;
-  top: 38px;
-  background: linear-gradient(-135deg, transparent 51%, #F3F3F3 0);
+  right: -18px;
+  top: 12px;
+ /* background: linear-gradient(-135deg, transparent 51%, #F3F3F3 0);*/
+  border: 9px solid;
+  border-color: transparent transparent #F3F3F3 #F3F3F3;
 }
 
-.speech.speech-reply:after {
-  content: ' ';
-  position: absolute;
-  width: 0;
+
+/*外层提供border*/
+.speech.speech-left:before {
+  left: -20px;
+  right: auto;
+  border-color: gray gray transparent transparent; 
+}
+
+.speech.speech-left:after {
+  left: -18px;
+  right: auto;
+  border-color: #F3F3F3 #F3F3F3 transparent transparent; 
+}
+
+.record {
+  padding: 10px;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
   height: 0;
-  left: -30px;
-  top: 38px;
-  border: 15px solid;
-  border-color: #F3F3F3 #F3F3F3 transparent transparent;  
 }
 
-html, body,
-#root, .main-container,
-.scene {
+.absolute-center {
+  width: 480px;
   height: 100%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.mobile {
+  background: white;
+  width: 414px;
+  height: 736px;
+  border: 2px solid silver;
+  -moz-border-radius: 40px;;
+  -webkit-border-radius: 40px;;
+  border-radius: 40px;;
+  padding: 15px 7px;
+}
+
+.mobile:before {
+  content: " ";
+  background: #222;
+  display: block;
+  width: 60px;
+  height: 5px;
+  margin: 5px auto 15px auto;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/*home button*/
+.mobile:after {
+  content: " ";
+  display: block;
+  background: white;
+  width: 45px;
+  height: 45px;
+  margin: 13px auto 0px;
+  border: 1px solid silver;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.mobile .screen {
+  border: 1px solid #1F1C23;
+  background: #ECE7E7;
+  height: 88%;
 }

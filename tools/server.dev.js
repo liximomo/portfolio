@@ -16,6 +16,8 @@ new WebpackDevServer(webpack(config), { // Start a server
   devtool: 'eval',
   quiet: false,
   noInfo: false,
+  filename: config.output.filename,
+  publicPath: config.output.publicPath,
 }).listen(3000, 'localhost', function (err, result) {
   if (err) {
     console.log(err);
