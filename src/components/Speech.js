@@ -3,10 +3,10 @@ import classnames from 'classnames';
 
 class Speech extends Component {
   render() {
-    const { content, reply } = this.props;
+    const { content, user } = this.props;
 
     return (
-      <p className={classnames({speech: true, 'speech-left': reply})} >
+      <p className={classnames({speech: true, 'speech-left': !user})} >
         {content}
       </p>
     )

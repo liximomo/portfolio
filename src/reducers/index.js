@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
+import speeches from './speech'
 
 const rootReducer = combineReducers({
-  todos
+  speeches
 })
 
 export default rootReducer

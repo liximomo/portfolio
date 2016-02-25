@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/pages/index.js",
   output: {
     path: __dirname,
     filename: "bundle.js"
@@ -15,9 +15,5 @@ module.exports = {
         }
       }
     ]
-  },
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
   }
 };

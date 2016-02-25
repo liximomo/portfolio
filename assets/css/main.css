@@ -110,8 +110,12 @@
   border-radius: 50%;
 }
 
-.mobile .screen {
+.screen {
   border: 1px solid #1F1C23;
   background: #ECE7E7;
+  overflow-y: auto;
+}
+
+.mobile .screen {
   height: 88%;
 }

@@ -1,8 +1,9 @@
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/pages/index.js",
   output: {
     path: __dirname,
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: '/assets/'
   },
   module: {
     loaders: [

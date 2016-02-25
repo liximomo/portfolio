@@ -8,7 +8,7 @@ class Record extends Component {
 
     return (
       <div className="record clearfix" >
-        <Speech content={speech.content} reply={speech.reply} />
+        <Speech content={speech.content} user={speech.user} />
       </div>
     )
   }
