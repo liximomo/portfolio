@@ -1,8 +1,11 @@
+var path = require('path');
+
 module.exports = {
   entry: "./src/pages/index.js",
   output: {
-    path: __dirname,
-    filename: "bundle.js"
+    path: path.join(__dirname, 'assets'),
+    filename: "bundle.js",
+    publicPath: '/assets/'
   },
   module: {
     loaders: [
@@ -15,5 +18,9 @@ module.exports = {
         }
       }
     ]
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
   }
 };
