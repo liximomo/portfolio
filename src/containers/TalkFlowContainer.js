@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Window from '../components/Window'
+import TalkFlow from '../components/TalkFlow'
 import * as SpeechActions from '../actions/speeches'
 
 
@@ -20,4 +20,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   state => state,
   mapDispatchToProps
-)(Window)
+)(TalkFlow)

@@ -78,8 +78,6 @@
   width: 414px;
   height: 736px;
   border: 2px solid silver;
-  -moz-border-radius: 40px;;
-  -webkit-border-radius: 40px;;
   border-radius: 40px;;
   padding: 15px 7px;
 }
@@ -91,8 +89,6 @@
   width: 60px;
   height: 5px;
   margin: 5px auto 15px auto;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -105,17 +101,39 @@
   height: 45px;
   margin: 13px auto 0px;
   border: 1px solid silver;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
 }
 
 .screen {
   border: 1px solid #1F1C23;
   background: #ECE7E7;
-  overflow-y: auto;
 }
 
 .mobile .screen {
   height: 88%;
+}
+
+.mobile .screen .view {
+  height: 100%;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 50px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(193,193,193,0.8);; 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(193,193,193,0.4);
 }

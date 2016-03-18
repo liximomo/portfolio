@@ -1,8 +1,10 @@
+import "babel-polyfill";
 import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import configureStore from '../store/configureStore';
-import App from '../containers/App';
+import configureStore from './src/store/configureStore';
+import Window from './src/Components/Window';
+import TalkFlowContainer from './src/containers/TalkFlowContainer';
 
 const store = configureStore({
   speeches: [],
@@ -10,7 +12,9 @@ const store = configureStore({
 
 render(
   <Provider store={store}>
-    <App />
+    <Window>
+      <TalkFlowContainer />
+    </Window> 
   </Provider>,
   document.getElementById('root')
 )
